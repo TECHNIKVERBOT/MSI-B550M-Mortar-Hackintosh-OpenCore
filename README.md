@@ -82,7 +82,7 @@ Warning: They're known to create stability issues as well, if you're receiving r
 
 ## Credits
 
-* [TECHNIKVERBOT](https://github.com/TECHNIKVERBOT) and [SkyrilHD](https://github.com/SkyrilHD) (for creating the EFI)
+* [TECHNIKVERBOT](https://github.com/TECHNIKVERBOT) (for creating the EFI)
 * [AMD-OSX](https://github.com/AMD-OSX/AMD_Vanilla) (for the kernel patches)
 * [acidanthera](https://github.com/acidanthera) (for OpenCore and the kexts)
 * [dortania](https://dortania.github.io/OpenCore-Install-Guide/) for their awesome guide
