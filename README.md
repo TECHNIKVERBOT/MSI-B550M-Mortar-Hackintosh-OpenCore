@@ -67,7 +67,7 @@ For Kepler users wanting to use Monterey or Ventura:
 1. Set `SecureBootModel` to from `Default` to `Disabled`
 2. Add `ipc_control_port_options=0` and (Ventura only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
 3. Change value of `csr-active-config` to `03080000`
-4. Use [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) to add back GPU acceleration.
+4. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
 
 There are two ways you can make a USB installer:
 
