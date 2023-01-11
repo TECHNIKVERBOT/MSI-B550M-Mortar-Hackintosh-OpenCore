@@ -53,11 +53,21 @@ See the table below for the values matching your CPU Core Count.
 
 [Dortania BIOS Guide](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#amd-bios-settings)
 
-## How to install
+## GPU specific settings
 
-Download this repo and place the EFI folder into your internal drive's EFI partition... That's it.
+AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll need to add their appropriate boot-args:
 
-## How to Install macOS:
+| GPU type | boot-args |
+|--------|---------|
+| NVIDIA Kepler (GTX 600/700 series) (Catalina/Big Sur) | `shikigva=40 agdpmod=vit9696` |
+| AMD Navi (RX 5000/6000 series) | `agdpmod=pikera`
+
+For Kepler users wanting to use Monterey or Ventura:
+
+1. Set `SecureBootModel` to from `Default` to `Disabled`
+2. Add `ipc_control_port_options=0` and (Ventura only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
+3. Change value of `csr-active-config` to `03080000`
+4. Use [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) to add back GPU acceleration.
 
 There are two ways you can make a USB installer:
 
