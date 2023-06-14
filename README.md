@@ -35,7 +35,7 @@ Core Count patch needs to be modified to boot your system, if not using a 6 core
 
 Changing `BA000000 0000`/`BA000000 0090`* to `BA <CoreCount> 0000 0000`/`BA <CoreCount> 0000 0090`* substituting `<CoreCount>` with the hexadecimal value matching your physical core count.
 
-**Note:** *The two different values reflect the patch for different versions of macOS. Be sure to change all two if you boot macOS 10.15 to macOS 13*
+**Note:** *The two different values reflect the patch for different versions of macOS. Be sure to change all two if you boot macOS 10.15 to macOS 14*
 
 See the table below for the values matching your CPU Core Count.
 
