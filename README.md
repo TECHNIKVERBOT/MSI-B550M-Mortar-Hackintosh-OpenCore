@@ -57,10 +57,10 @@ See the table below for the values matching your CPU Core Count.
 
 AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll need to add their appropriate boot-args:
 
-| GPU type | boot-args |
-|--------|---------|
-| NVIDIA Kepler (GTX 600/700 series) (Catalina/Big Sur) | `shikigva=40 agdpmod=vit9696` |
-| AMD Navi (RX 5000/6000 series) | `agdpmod=pikera`
+| GPU type | boot-args | Notes |
+|--------|---------|---------|
+| NVIDIA Kepler (GTX 600/700 series) (Catalina/Big Sur) | `shikigva=40 agdpmod=vit9696` | Disable `RadeonSensor` & `SMCRadeonGPU` kexts in config
+| AMD Navi (RX 5000/6000 series) | `agdpmod=pikera` |
 
 For Kepler users wanting to use Monterey or Ventura:
 
