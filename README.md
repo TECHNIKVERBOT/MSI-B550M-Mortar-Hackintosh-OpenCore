@@ -79,6 +79,8 @@ For Kepler users wanting to use Monterey or newer:
 4. Grab the latest development branch of [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077#issuecomment-1646934494) and install the Post-Install root patches to restore WiFi support.
 5. Replace `amfi=0x80` with `-amfipassbeta` to restore AMFI support.
 
+## Creating the installer
+
 There are two ways you can make a USB installer:
 
 1. Have a working install of macOS, download the Installer from the App Store, then make a bootable Installer with the `createinstallmedia` command
