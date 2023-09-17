@@ -62,7 +62,7 @@ AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll nee
 | NVIDIA Kepler (GTX 600/700 series) (Catalina/Big Sur) | `shikigva=40 agdpmod=vit9696` | Disable `RadeonSensor` & `SMCRadeonGPU` kexts in config
 | AMD Navi (RX 5000/6000 series) | `agdpmod=pikera` |
 
-For Kepler users wanting to use Monterey or Ventura:
+For Kepler users wanting to use Monterey or newer:
 
 1. Set `SecureBootModel` to from `Default` to `Disabled`
 2. Add `ipc_control_port_options=0` and (Ventura and newer only) `amfi=0x80` in addition to the aformentioned boot-args
