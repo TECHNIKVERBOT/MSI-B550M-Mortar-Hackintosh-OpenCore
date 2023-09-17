@@ -65,9 +65,19 @@ AMD Polaris and Vega GPU users can skip this portion. For other GPUs, you'll nee
 For Kepler users wanting to use Monterey or Ventura:
 
 1. Set `SecureBootModel` to from `Default` to `Disabled`
-2. Add `ipc_control_port_options=0 revpatch=sbvmm` and (Ventura only) `amfi_get_out_of_my_way=1` in addition to the aformentioned boot-args
+2. Add `ipc_control_port_options=0` and (Ventura and newer only) `amfi=0x80` in addition to the aformentioned boot-args
 3. Change value of `csr-active-config` to `03080000`
-4. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
+4. (Ventura and newer only) Remove `23.00.00` from `MinKernel` from the AMFIPass.kext entry unter `Kernel --> Add`
+5. Grab [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) and install the Post-Install root patches to add back GPU acceleration!
+6. Replace `amfi=0x80` with `-amfipassbeta` to restore AMFI support.
+
+## Fixing AirPort WiFi in Sonoma (applicable for all native Apple or Fenvi WiFi cards)
+
+1. Set `SecureBootModel` to from `Default` to `Disabled`
+2. Add `ipc_control_port_options=0` and `amfi=0x80` to the boot-args
+3. Change value of `csr-active-config` to `03080000`
+4. Grab the latest development branch of [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/pull/1077#issuecomment-1646934494) and install the Post-Install root patches to restore WiFi support.
+5. Replace `amfi=0x80` with `-amfipassbeta` to restore AMFI support.
 
 There are two ways you can make a USB installer:
 
