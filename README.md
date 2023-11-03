@@ -69,7 +69,7 @@ For Kepler users wanting to use Monterey or newer:
 3. Change value of `csr-active-config` to `03080000`
 4. (Ventura and newer only) Remove `23.00.00` from `MinKernel` from the AMFIPass.kext entry unter `Kernel --> Add`
 5. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases), open it and install the Post-Install root patches to add back GPU acceleration!
-6. Replace `amfi=0x80` with `-amfipassbeta` to restore AMFI support.
+6. Remove `amfi=0x80` to restore AMFI support.
 
 ## Fixing AirPort WiFi in Sonoma (applicable for all native Apple or Fenvi WiFi cards)
 
@@ -77,7 +77,7 @@ For Kepler users wanting to use Monterey or newer:
 2. Add `ipc_control_port_options=0` and `amfi=0x80` to the boot-args
 3. Change value of `csr-active-config` to `03080000`
 4. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases), open it and install the Post-Install root patches to restore WiFi support.
-5. Replace `amfi=0x80` with `-amfipassbeta` to restore AMFI support.
+5. Remove `amfi=0x80` to restore AMFI support.
 
 ## Creating the installer
 
